@@ -10,20 +10,7 @@ import psycopg2
 app = Flask(__name__)
 CORS(app)
 
-app.config['CORS_HEADERS'] = 'application/json'
-# Database configuration
-# Database connection
-DB_HOST = 'localhost'
-DB_NAME = 'payload'
-DB_USER = 'postgres'
-DB_PASSWORD = 'root'
 
-# Initialize S3 client
-s3 = boto3.client(
-    's3',
-    aws_access_key_id='AKIA47CR2RFZRWOMIIGO',
-    aws_secret_access_key='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'
-)
 
 # Establish a connection to the database
 def get_db_connection():
